@@ -50,12 +50,6 @@ Liang Zhu (朱亮) is now a second-year Ph.D. student in the Software Engineerin
 - *2020.09 - 2023.06*, Master, School of Computer and Communication Engineering, Zhengzhou University of Light Industry. 
 - *2016.09 - 2020.06*, Undergraduate, School of Computer and Communication Engineering, Zhengzhou University of Light Industry. 
 
-<!-- # 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/) -->
-
-<!-- # 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China. -->
 
 <div id="myDiv" style="width: 200px; height: 100px; place-items: center;">
     <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=ffnC4TAuWuAbM-DIAxTGrIojOpf1jHuCdpMef1f4x5A&cl=ffffff&w=a"></script>
