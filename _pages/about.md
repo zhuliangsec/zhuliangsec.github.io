@@ -56,17 +56,8 @@ Liang Zhu (朱亮) is now a second-year Ph.D. student in the Software Engineerin
 
 <!-- # 💻 Internships
 - *2019.05 - 2020.02*, [Lorem](https://github.com/), China. -->
-<style>
-    .container {
-        .container {
-        display: flex;
-        justify-content: center; /* 水平居中 */
-        align-items: center; /* 垂直居中 */
-        height: 100vh; /* 使容器高度为视口高度 */
-    } 
-    }
-</style>
-<div id="myDiv" style="width: 200px; height: 100px; " class="container">
+
+<div id="myDiv" style="width: 200px; height: 100px; place-items: center;">
     <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=ffnC4TAuWuAbM-DIAxTGrIojOpf1jHuCdpMef1f4x5A&cl=ffffff&w=a"></script>
 </div>
 
