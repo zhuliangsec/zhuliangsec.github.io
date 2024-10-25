@@ -58,7 +58,7 @@ Liang Zhu (朱亮) is now a second-year Ph.D. student in the Software Engineerin
 - *2019.05 - 2020.02*, [Lorem](https://github.com/), China. -->
 <style>
     .container {
-        text-align: center; 
+        place-items: center; 
     }
 </style>
 <div id="myDiv" style="width: 200px; height: 100px; " class="container">
