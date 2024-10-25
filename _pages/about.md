@@ -58,6 +58,9 @@ Liang Zhu (朱亮) is now a second-year Ph.D. student in the Software Engineerin
 - *2019.05 - 2020.02*, [Lorem](https://github.com/), China. -->
 
 <script size="" type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=ffnC4TAuWuAbM-DIAxTGrIojOpf1jHuCdpMef1f4x5A&cl=ffffff&w=a">
+
+  var newElement = document.createElement('div');
     newElement.style.width = '300px';
     newElement.style.height = '200px';
+    document.body.appendChild(newElement);
 </script>
