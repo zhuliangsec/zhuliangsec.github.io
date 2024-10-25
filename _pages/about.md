@@ -46,7 +46,7 @@ Liang Zhu (朱亮) is now a second-year Ph.D. student in the Software Engineerin
 - *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
 # 📖 Educations
-- *2023.09 - 2027.06 (now)*, Software Engineering Institute, East China Normal University. 
+- *2023.09 - 2027.06 (now)*, Ph.D. student/candidate, Software Engineering Institute, East China Normal University. 
 - *2020.09 - 2023.06*, Master, School of Computer and Communication Engineering, Zhengzhou University of Light Industry. 
 - *2016.09 - 2020.06*, Undergraduate, School of Computer and Communication Engineering, Zhengzhou University of Light Industry. 
 
