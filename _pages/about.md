@@ -31,31 +31,15 @@ Liang Zhu (朱亮) is now a second-year Ph.D. student in the Software Engineerin
 
 # 📝 Selected Publications 
 
-1. tifs
+1. ZHANG Qi-kun,  **ZHU Liang**,  HAN Gui-feng,  LIU Meng-qi,  JIN Bao-hua,  LI Yuan-zhang. 2024. Group Key Agreement Protocol Based on Dynamic Attribute Permissions for Edge-Cloud Collaboration Scenarios. Acta Electronica Sinica.
 
-1. tdsc
-
-1. tsc
-
-1. tmc
-
-<!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
-
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
-
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-</div>
-</div> -->
-
-<!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
 # 🎖 Honors and Awards
 <!-- - *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+* National Scholarship, Ministry of Education, China, 2023.
+* Advanced Individual in Scientific Research at Zhengzhou University of Light Industry, 2023.
+* Outstanding Graduate of Henan Province. 2020.
 
 # 📖 Educations
 - *2023.09 - 2027.06 (now)*, Ph.D. student/candidate, Software Engineering Institute, East China Normal University. 
@@ -63,7 +47,11 @@ Liang Zhu (朱亮) is now a second-year Ph.D. student in the Software Engineerin
 - *2016.09 - 2020.06*, Undergraduate, School of Computer and Communication Engineering, Zhengzhou University of Light Industry. 
 
 
-<style> #clustrmaps-container { /* transform: scale(0.5); */ transform-origin: top left; width: 200px; /* Adjust this value based on your desired width */ height: 150px; /* Adjust this value based on your desired height */ overflow: hidden; /* This will hide any overflow content */ /* Centering the container horizontally */ margin-left: auto; margin-right: auto; display: block; } </style>
-<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=ffnC4TAuWuAbM-DIAxTGrIojOpf1jHuCdpMef1f4x5A&cl=ffffff&w=a"></script>
+<style> 
+    #clustrmaps-container { /* transform: scale(0.5); */ transform-origin: top left; width: 200px; /* Adjust this value based on your desired width */ height: 150px; /* Adjust this value based on your desired height */ overflow: hidden; /* This will hide any overflow content */ /* Centering the container horizontally */ margin-left: auto; margin-right: auto; display: block; } 
 
+</style>
+<div id="clustrmaps-container">
+    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=ffnC4TAuWuAbM-DIAxTGrIojOpf1jHuCdpMef1f4x5A&cl=ffffff&w=a"></script>
+</div>
 
