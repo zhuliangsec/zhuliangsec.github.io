@@ -20,12 +20,24 @@ redirect_from:
 
 Liang Zhu (朱亮) is now a second-year Ph.D. student in the Software Engineering Institute at [East China Normal University](https://www.ecnu.edu.cn/), under the supervision of Prof. [Xiangxue Li](https://faculty.ecnu.edu.cn/_s43/lxx2/main.psp). Before that, I received my B.S. degree and M.s. degree in School of Computer and Communication Engineering from [Zhengzhou University of Light Industry](http://www.zzuli.edu.cn/) in 2020 and 2023, respectively, under the supervision of Prof. [Qikun Zhang](https://cs.zzuli.edu.cn/2021/0305/c21434a259337/page.htm).
 
+💬 lzhu @ stu.ecnu.edu.cn
+
+
+
 
 # 🔥 News
 - *2023.09*: &nbsp;🎉🎉 I would like to thank Prof. Xiangxue Li for giving me the opportunity to continue my education at East China Normal University. 
 
 
-# 📝 Publications 
+# 📝 Selected Publications 
+
+1. tifs
+
+1. tdsc
+
+1. tsc
+
+1. tmc
 
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -51,7 +63,7 @@ Liang Zhu (朱亮) is now a second-year Ph.D. student in the Software Engineerin
 - *2016.09 - 2020.06*, Undergraduate, School of Computer and Communication Engineering, Zhengzhou University of Light Industry. 
 
 
-<div id="myDiv" style="width: 200px; height: 100px; place-items: center;">
-    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=ffnC4TAuWuAbM-DIAxTGrIojOpf1jHuCdpMef1f4x5A&cl=ffffff&w=a"></script>
-</div>
+<style> #clustrmaps-container { /* transform: scale(0.5); */ transform-origin: top left; width: 200px; /* Adjust this value based on your desired width */ height: 150px; /* Adjust this value based on your desired height */ overflow: hidden; /* This will hide any overflow content */ /* Centering the container horizontally */ margin-left: auto; margin-right: auto; display: block; } </style>
+<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=ffnC4TAuWuAbM-DIAxTGrIojOpf1jHuCdpMef1f4x5A&cl=ffffff&w=a"></script>
+
 
