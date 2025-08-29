@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Liang Zhu (朱亮) is now a second-year Ph.D. student in the Software Engineering Institute at [East China Normal University](https://www.ecnu.edu.cn/), under the supervision of Prof. [Xiangxue Li](https://faculty.ecnu.edu.cn/_s43/lxx2/main.psp). Before that, I received my B.S. degree and M.s. degree in School of Computer and Communication Engineering from [Zhengzhou University of Light Industry](http://www.zzuli.edu.cn/) in 2020 and 2023, respectively, under the supervision of Prof. [Qikun Zhang](https://cs.zzuli.edu.cn/2021/0305/c21434a259337/page.htm).
+Liang Zhu (朱亮) is now a third-year Ph.D. student in the Software Engineering Institute at [East China Normal University](https://www.ecnu.edu.cn/), under the supervision of Prof. [Xiangxue Li](https://faculty.ecnu.edu.cn/_s43/lxx2/main.psp). Before that, I received my B.S. degree and M.s. degree in School of Computer and Communication Engineering from [Zhengzhou University of Light Industry](http://www.zzuli.edu.cn/) in 2020 and 2023, respectively, under the supervision of Prof. [Qikun Zhang](https://cs.zzuli.edu.cn/2021/0305/c21434a259337/page.htm).
 
 💬 lzhu @ stu.ecnu.edu.cn
 
@@ -29,7 +29,7 @@ Liang Zhu (朱亮) is now a second-year Ph.D. student in the Software Engineerin
 
 
 # 📝 Selected Publications 
-1. Yongjiao Li, **Liang Zhu**, Yalin Deng, Qikun Zhang, Zhenlei Wang, Zhu Cao, Fast revocable attribute-based encryption with data integrity for Internet of Things, Journal of Systems Architecture, 2025, 103551, ISSN 1383-7621, https://doi.org/10.1016/j.sysarc.2025.103551.
+1. Yongjiao Li, **Liang Zhu**, Yalin Deng, Qikun Zhang, Zhenlei Wang, Zhu Cao, Fast revocable attribute-based encryption with data integrity for Internet of Things, Journal of Systems Architecture, 2025, ISSN 1383-7621.
 
 1. 张启坤, **朱亮**, 韩桂锋, 刘梦琪, 金保华, 李元章. 边云协同场景中基于动态属性权限的群组密钥协商协议[J]. 电子学报.2024，52(6):1911-1924.
 
