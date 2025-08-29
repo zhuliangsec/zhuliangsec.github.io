@@ -29,6 +29,8 @@ Liang Zhu (朱亮) is now a second-year Ph.D. student in the Software Engineerin
 
 
 # 📝 Selected Publications 
+1. Yongjiao Li, **Liang Zhu**, Yalin Deng, Qikun Zhang, Zhenlei Wang, Zhu Cao, Fast revocable attribute-based encryption with data integrity for Internet of Things, Journal of Systems Architecture, 2025, 103551, ISSN 1383-7621, https://doi.org/10.1016/j.sysarc.2025.103551.
+
 1. ZHANG Qi-kun,  **ZHU Liang**,  HAN Gui-feng,  LIU Meng-qi,  JIN Bao-hua,  LI Yuan-zhang. 2024. Group Key Agreement Protocol Based on Dynamic Attribute Permissions for Edge-Cloud Collaboration Scenarios. Acta Electronica Sinica.
 
 # 📖 Educations
