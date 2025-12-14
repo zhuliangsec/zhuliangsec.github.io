@@ -29,9 +29,9 @@ Liang Zhu (朱亮) is now a third-year Ph.D. student in the Software Engineering
 
 
 # 📝 Selected Publications 
-1. Yongjiao Li, **Liang Zhu**, Yalin Deng, Qikun Zhang, Zhenlei Wang, Zhu Cao, Fast revocable attribute-based encryption with data integrity for Internet of Things, Journal of Systems Architecture, 2025, ISSN 1383-7621.
+1. Li Y, **Zhu L**, Deng Y, et al. Fast revocable attribute-based encryption with data integrity for Internet of Things[J]. Journal of Systems Architecture, 2025: 103551.
 
-1. 张启坤, **朱亮**, 韩桂锋, 刘梦琪, 金保华, 李元章. 边云协同场景中基于动态属性权限的群组密钥协商协议[J]. 电子学报.2024，52(6):1911-1924.
+1. 张启坤, **朱亮**, 韩桂锋等. 边云协同场景中基于动态属性权限的群组密钥协商协议[J]. 电子学报.2024，52(6):1911-1924.
 
 # 📖 Educations
 - *2023.09 - 2027.06 (now)*, Ph.D. student/candidate, Software Engineering Institute, East China Normal University. 
