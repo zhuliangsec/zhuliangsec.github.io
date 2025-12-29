@@ -23,8 +23,8 @@ Liang Zhu (朱亮) is now a third-year Ph.D. student in the Software Engineering
 
 
 # 🔥 News
+- *2025.12*: &nbsp;🎉🎉 One paper has been accepted by IEEE IoT Journal.
 - *2025.08*: &nbsp;🎉🎉 The paper from our team has been accepted for publication in JSA.
-- *2023.09*: &nbsp;🎉🎉 I would like to thank Prof. Xiangxue Li for giving me the opportunity to continue my education at East China Normal University. 
 
 
 
