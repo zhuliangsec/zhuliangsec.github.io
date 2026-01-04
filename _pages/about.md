@@ -31,7 +31,7 @@ Liang Zhu (朱亮) is now a third-year Ph.D. student in the Software Engineering
 # 📝 Selected Publications 
 1. **L. Zhu**, X. Zhang and X. Li, "[Privacy-Preserving, Verifiable, and Transformable Access Control for Cloud-Assisted IoV](https://ieeexplore.ieee.org/document/11321133)," in IEEE Internet of Things Journal, doi: 10.1109/JIOT.2025.3650174.
 
-1. Li Y, **Zhu L**, Deng Y, et al. [Fast revocable attribute-based encryption with data integrity for Internet of Things](Fast revocable attribute-based encryption with data integrity for Internet of Things)[J]. Journal of Systems Architecture, 2025: 103551.
+1. Li Y, **Zhu L**, Deng Y, et al. [Fast revocable attribute-based encryption with data integrity for Internet of Things](https://doi.org/10.1016/j.sysarc.2025.103551)[J]. Journal of Systems Architecture, 2025: 103551.
 
 1. 张启坤, **朱亮**, 韩桂锋等. [边云协同场景中基于动态属性权限的群组密钥协商协议](https://doi.org/10.12263/DZXB.20220727)[J]. 电子学报.2024，52(6):1911-1924.
 
