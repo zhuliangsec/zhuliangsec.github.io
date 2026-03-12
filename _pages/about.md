@@ -46,6 +46,12 @@ Liang Zhu (朱亮) is now a third-year Ph.D. student in the Software Engineering
 * Advanced Individual in Scientific Research at Zhengzhou University of Light Industry, 2023.
 * Outstanding Graduate of Henan Province. 2020.
 
+# 📚 Academic Services
+
+Journal Reviewer
+
+* array
+
 <style> 
     #clustrmaps-container { /* transform: scale(0.5); */ transform-origin: top left; width: 200px; /* Adjust this value based on your desired width */ height: 150px; /* Adjust this value based on your desired height */ overflow: hidden; /* This will hide any overflow content */ /* Centering the container horizontally */ margin-left: auto; margin-right: auto; display: block; } 
 
