@@ -23,12 +23,15 @@ Liang Zhu (朱亮) is now a third-year Ph.D. student in the Software Engineering
 
 
 # 🔥 News
+- *2026.08*: &nbsp;🎉🎉 One paper has been accepted by TMC.
 - *2025.12*: &nbsp;🎉🎉 One paper has been accepted by IEEE IoT Journal.
 - *2025.08*: &nbsp;🎉🎉 The paper from our team has been accepted for publication in JSA.
 
 
 
 # 📝 Selected Publications 
+
+
 1. **L. Zhu**, X. Zhang and X. Li, "[Privacy-Preserving, Verifiable, and Transformable Access Control for Cloud-Assisted IoV](https://ieeexplore.ieee.org/document/11321133)," in IEEE Internet of Things Journal, doi: 10.1109/JIOT.2025.3650174.
 
 1. Li Y, **Zhu L**, Deng Y, et al. [Fast revocable attribute-based encryption with data integrity for Internet of Things](https://doi.org/10.1016/j.sysarc.2025.103551)[J]. Journal of Systems Architecture, 2025: 103551.
