@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Liang Zhu (朱亮) is now a third-year Ph.D. student in the Software Engineering Institute at [East China Normal University](https://www.ecnu.edu.cn/), under the supervision of Prof. [Xiangxue Li](https://faculty.ecnu.edu.cn/_s43/lxx2/main.psp). Before that, I received my B.S. degree and M.s. degree in School of Computer and Communication Engineering from [Zhengzhou University of Light Industry](http://www.zzuli.edu.cn/) in 2020 and 2023, respectively, under the supervision of Prof. [Qikun Zhang](https://cs.zzuli.edu.cn/2021/0305/c21434a259337/page.htm).
+Liang Zhu (朱亮) is now a fourth-year Ph.D. student in the Software Engineering Institute at [East China Normal University](https://www.ecnu.edu.cn/), under the supervision of Prof. [Xiangxue Li](https://faculty.ecnu.edu.cn/_s43/lxx2/main.psp). Before that, I received my B.S. degree and M.s. degree in School of Computer and Communication Engineering from [Zhengzhou University of Light Industry](http://www.zzuli.edu.cn/) in 2020 and 2023, respectively, under the supervision of Prof. [Qikun Zhang](https://cs.zzuli.edu.cn/2026/0318/c21434a347090/page.htm).
 
 💬 lzhu @ stu.ecnu.edu.cn
 
