@@ -34,6 +34,8 @@ Liang Zhu (朱亮) is now a third-year Ph.D. student in the Software Engineering
 
 1. **L. Zhu**, X. Zhang and X. Li, "[Privacy-Preserving, Verifiable, and Transformable Access Control for Cloud-Assisted IoV](https://ieeexplore.ieee.org/document/11321133)," in IEEE Internet of Things Journal, doi: 10.1109/JIOT.2025.3650174.
 
+1. Yongjiao Li, **Liang Zhu** et, al. [Revocable and Pairing-free Multi-domain Access Control with Key Self-generation for Vehicular Ad Hoc Networks](https://doi.org/10.1109/TMC.2026.3732408)[J]. IEEE Transactions on Mobile Computing, 2026.
+
 1. Li Y, **Zhu L**, Deng Y, et al. [Fast revocable attribute-based encryption with data integrity for Internet of Things](https://doi.org/10.1016/j.sysarc.2025.103551)[J]. Journal of Systems Architecture, 2025: 103551.
 
 1. 张启坤, **朱亮**, 韩桂锋等. [边云协同场景中基于动态属性权限的群组密钥协商协议](https://doi.org/10.12263/DZXB.20220727)[J]. 电子学报.2024，52(6):1911-1924.
@@ -55,11 +57,5 @@ Liang Zhu (朱亮) is now a third-year Ph.D. student in the Software Engineering
 
 * array
 
-<style> 
-    #clustrmaps-container { /* transform: scale(0.5); */ transform-origin: top left; width: 200px; /* Adjust this value based on your desired width */ height: 150px; /* Adjust this value based on your desired height */ overflow: hidden; /* This will hide any overflow content */ /* Centering the container horizontally */ margin-left: auto; margin-right: auto; display: block; } 
-
-</style>
-<div id="clustrmaps-container">
-    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=ffnC4TAuWuAbM-DIAxTGrIojOpf1jHuCdpMef1f4x5A&cl=ffffff&w=a"></script>
-</div>
+<a href="https://info.flagcounter.com/aXGI"><img src="https://s05.flagcounter.com/count2/aXGI/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_6/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
 
