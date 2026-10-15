@@ -55,6 +55,7 @@ Liang Zhu (朱亮) is now a fourth-year Ph.D. student in the Software Engineerin
 
 ## Journal Reviewer
 
+* IEEE Transactions on Mobile Computing
 * array
 
 <a href="https://info.flagcounter.com/aXGI"><img src="https://s05.flagcounter.com/count2/aXGI/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_6/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
