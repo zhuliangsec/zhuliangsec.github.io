@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Liang Zhu (朱亮) is now a fourth-year Ph.D. student in the Software Engineering Institute at [East China Normal University](https://www.ecnu.edu.cn/), under the supervision of Prof. [Xiangxue Li](https://faculty.ecnu.edu.cn/_s43/lxx2/main.psp). Before that, I received my B.S. degree and M.s. degree in School of Computer and Communication Engineering from [Zhengzhou University of Light Industry](http://www.zzuli.edu.cn/) in 2020 and 2023, respectively, under the supervision of Prof. [Qikun Zhang](https://cs.zzuli.edu.cn/2026/0318/c21434a347090/page.htm).
+Liang Zhu (朱亮) is now a fourth-year Ph.D. student in the Software Engineering Institute at [East China Normal University (华东师范大学)](https://www.ecnu.edu.cn/), under the supervision of Prof. [Xiangxue Li](https://faculty.ecnu.edu.cn/_s43/lxx2/main.psp). Before that, I received my B.S. degree and M.s. degree in School of Computer and Communication Engineering from [Zhengzhou University of Light Industry (郑州轻工业大学)](http://www.zzuli.edu.cn/) in 2020 and 2023, respectively, under the supervision of Prof. [Qikun Zhang](https://cs.zzuli.edu.cn/2026/0318/c21434a347090/page.htm).
 
 💬 lzhu @ stu.ecnu.edu.cn
 
@@ -32,13 +32,13 @@ Liang Zhu (朱亮) is now a fourth-year Ph.D. student in the Software Engineerin
 # 📝 Selected Publications 
 
 
-1. **L. Zhu**, X. Zhang and X. Li, "[Privacy-Preserving, Verifiable, and Transformable Access Control for Cloud-Assisted IoV](https://ieeexplore.ieee.org/document/11321133)," in IEEE Internet of Things Journal, doi: 10.1109/JIOT.2025.3650174.
+1. **L. Zhu**, X. Zhang and X. Li, "[Privacy-Preserving, Verifiable, and Transformable Access Control for Cloud-Assisted IoV](https://ieeexplore.ieee.org/document/11321133)," in IEEE Internet of Things Journal, doi: 10.1109/JIOT.2025.3650174. (SCI一区, top)
 
-1. Yongjiao Li, **Liang Zhu** et, al. [Revocable and Pairing-free Multi-domain Access Control with Key Self-generation for Vehicular Ad Hoc Networks](https://doi.org/10.1109/TMC.2026.3732408)[J]. IEEE Transactions on Mobile Computing, 2026.
+1. Yongjiao Li, **Liang Zhu** et, al. [Revocable and Pairing-free Multi-domain Access Control with Key Self-generation for Vehicular Ad Hoc Networks](https://doi.org/10.1109/TMC.2026.3732408)[J]. IEEE Transactions on Mobile Computing, 2026. (SCI一区, CCF-A, top)
 
-1. Li Y, **Zhu L**, Deng Y, et al. [Fast revocable attribute-based encryption with data integrity for Internet of Things](https://doi.org/10.1016/j.sysarc.2025.103551)[J]. Journal of Systems Architecture, 2025: 103551.
+1. Li Y, **Zhu L**, Deng Y, et al. [Fast revocable attribute-based encryption with data integrity for Internet of Things](https://doi.org/10.1016/j.sysarc.2025.103551)[J]. Journal of Systems Architecture, 2025: 103551. (CCF-B)
 
-1. 张启坤, **朱亮**, 韩桂锋等. [边云协同场景中基于动态属性权限的群组密钥协商协议](https://doi.org/10.12263/DZXB.20220727)[J]. 电子学报.2024，52(6):1911-1924.
+1. 张启坤, **朱亮**, 韩桂锋等. [边云协同场景中基于动态属性权限的群组密钥协商协议](https://doi.org/10.12263/DZXB.20220727)[J]. 电子学报.2024，52(6):1911-1924. (中文CCF-A)
 
 # 📖 Educations
 - *2023.09 - 2027.06 (now)*, Ph.D. student/candidate, Software Engineering Institute, East China Normal University. 
@@ -47,9 +47,11 @@ Liang Zhu (朱亮) is now a fourth-year Ph.D. student in the Software Engineerin
 
 
 # 🎖 Honors and Awards
-* National Scholarship, Ministry of Education, China, 2023.
-* Advanced Individual in Scientific Research at Zhengzhou University of Light Industry, 2023.
-* Outstanding Graduate of Henan Province. 2020.
+* 分众奖学金，华东师范大学, 2026.
+* 国家奖学金, 教育部, 2023.
+* 科研先进个人, 郑州轻工业大学, 2023.
+* 优秀研究生, 郑州轻工业大学, 2021.
+* 河南省优秀毕业生, 河南省教育厅, 2020.
 
 # 📚 Academic Services
 
