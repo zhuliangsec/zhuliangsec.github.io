@@ -23,6 +23,8 @@ Liang Zhu (朱亮) is now a fourth-year Ph.D. student in the Software Engineerin
 
 
 # 🔥 News
+- *2026.11*: &nbsp;🎉🎉 Awarded the Outstanding Student Honor at East China Normal University.
+- *2026.11*: &nbsp;🎉🎉 Awarded the East China Normal University Scholarship.
 - *2026.08*: &nbsp;🎉🎉 One paper has been accepted by TMC.
 - *2025.12*: &nbsp;🎉🎉 One paper has been accepted by IEEE IoT Journal.
 - *2025.08*: &nbsp;🎉🎉 The paper from our team has been accepted for publication in JSA.
