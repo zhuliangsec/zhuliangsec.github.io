@@ -30,14 +30,16 @@
         });
 
         function render(data, source) {
-            var total = document.getElementById('total_cit');
-            if (total && typeof data.citedby !== 'undefined') {
-                total.textContent = data.citedby;
-                var badge = document.getElementById('citation-badge');
-                if (badge) {
-                    badge.src = 'https://img.shields.io/endpoint?url=' +
-                        encodeURIComponent(source.shields);
-                }
+            // 页面上只保留一个总引用数徽标；徽标的有无不依赖文字节点。
+            var hasData = typeof data.citedby !== 'undefined';
+            var total = document.getElementById('total_cit'); // 兼容旧版页面
+            if (total && hasData) total.textContent = data.citedby;
+
+            var badge = document.getElementById('citation-badge');
+            if (badge && hasData) {
+                badge.src = 'https://img.shields.io/endpoint?url=' +
+                    encodeURIComponent(source.shields);
+                badge.alt = 'Google Scholar citations: ' + data.citedby;
                 summary.style.display = '';
             }
 

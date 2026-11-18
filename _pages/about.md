@@ -37,9 +37,9 @@ Liang Zhu (朱亮) is now a fourth-year Ph.D. student in the Software Engineerin
 
 # 📝 Publications
 
-<!-- 引用数由 fetch_google_scholar_stats.html 填充；爬虫数据不存在时整行自动隐藏 -->
+<!-- 只显示一个总引用数徽标，由 fetch_google_scholar_stats.html 填充；数据不可用时整行隐藏 -->
 <p id="citation-summary" data-shields-url="{{ url }}" style="display:none">
-  <img id="citation-badge" alt="Google Scholar citations" style="vertical-align:middle;margin-left:.5em">
+  <img id="citation-badge" alt="Google Scholar citations">
 </p>
 
 1. **L. Zhu**, X. Zhang and X. Li, "[Privacy-Preserving, Verifiable, and Transformable Access Control for Cloud-Assisted IoV](https://ieeexplore.ieee.org/document/11321133)," in IEEE Internet of Things Journal, doi: 10.1109/JIOT.2025.3650174. (SCI一区, top) <span class='show_paper_citations' data='hbWYZ4MAAAAJ:zYLM7Y9cAGgC'></span>
