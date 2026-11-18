@@ -36,7 +36,8 @@ Some examples:
 1. Configure the google scholar citation crawler:
     1. Find your google scholar ID in the url of your google scholar page (e.g., https://scholar.google.com/citations?user=SCHOLAR_ID), where `SCHOLAR_ID` is your google scholar ID.
     1. Set `google_scholar_id` in `_config.yml` to your scholar ID and `author.googlescholar` to your full profile URL. The workflow reads `_config.yml` directly; you can also override it with the `GOOGLE_SCHOLAR_ID` repository secret (`Settings -> Secrets -> Actions`).
-    1. Click the `Action` of the REPO website and enable the workflows by clicking *"I understand my workflows, go ahead and enable them"*. This github action will generate google scholar citation stats data `gs_data.json` in `google-scholar-stats` branch of your REPO. When you update your main branch, this action will be triggered. This action will also be trigger 08:00 UTC everyday.
+    1. Enable workflows under `Actions`. `Get Citation Data` fetches the public Scholar profile with a single HTTP request (standard library only, no pip dependencies) and writes `gs_data.json` / `gs_data_shieldsio.json` to the `google-scholar-stats` branch. It runs on every push to `main`, daily at 08:00 UTC, and on demand.
+    1. The page tries jsDelivr CDN, then `raw.githubusercontent.com`, then the committed snapshot in `assets/data/`, so citations still render if the Action has never succeeded. Refresh the snapshot locally with `GOOGLE_SCHOLAR_ID=<ID> python google_scholar_crawler/main.py` and copy `results/*.json` into `assets/data/`.
 1. Generate favicon using [favicon-generator](https://redketchup.io/favicon-generator) and download all generated files to `REPO/images`.
 1. Modify the configuration of your homepage `_config.yml`:
     1. `title`: the title of your homepage
@@ -58,7 +59,7 @@ Some examples:
         ```html
         <span class='show_paper_citations' data-title='Fast revocable attribute-based encryption with data integrity for Internet of Things'></span>
         ```
-    1. Citation counts are loaded at page load from the `google-scholar-stats` branch, which is produced by the GitHub Action. Nothing is displayed (and nothing breaks) until the Action has succeeded at least once; afterwards the numbers refresh automatically every day.
+    1. Citation counts are loaded at page load from the first available source (CDN branch -> raw branch -> `assets/data/` snapshot). The Action refreshes the branch data daily; the numbers stay empty only if all three sources are unavailable, silently.
 1. Your page will be published at `https://USERNAME.github.io`.
 
 ## Debug Locally

@@ -38,7 +38,8 @@ AcadHomepage
 1. 配置谷歌学术引用爬虫：
     1. 在你的谷歌学术引用页面的url里找到你的谷歌学术ID：例如，在url https://scholar.google.com/citations?user=SCHOLAR_ID 中，`SCHOLAR_ID`部分即为你的谷歌学术ID。
     1. 在[_config.yml](../_config.yml)中把`google_scholar_id`填为该ID，并把`author.googlescholar`填为你的谷歌学术主页完整URL。workflow会直接读取配置文件；也可以在`Settings -> Secrets -> Actions`里用`GOOGLE_SCHOLAR_ID`覆盖。
-    1. 在 GitHub 仓库的 `Actions` 页面启用 workflows。该 action 会把谷歌学术引用统计数据 `gs_data.json` 写入本仓库的 `google-scholar-stats` 分支；每次推送 main 分支都会触发，此外每天 08:00 UTC 定时运行一次，也可在 Actions 里手动 Run workflow。
+    1. 在 GitHub 仓库的 `Actions` 页面启用 workflows。`Get Citation Data` 只发一次 HTTP 请求解析 Scholar 公开列表页（仅用 Python 标准库，无需安装依赖），把 `gs_data.json` / `gs_data_shieldsio.json` 写入 `google-scholar-stats` 分支；每次推送 main 触发，每天 08:00 UTC 定时运行，也可手动 Run workflow。
+    1. 页面按「jsDelivr CDN → raw.githubusercontent.com → 仓库内 `assets/data/` 快照」依次读取，因此即使 Action 从未成功，引用数也能显示。快照可在本机执行 `GOOGLE_SCHOLAR_ID=你的ID python google_scholar_crawler/main.py` 后，把 `results/*.json` 复制到 `assets/data/` 更新；Action 成功后会自动改用更新的分支数据。
 1. 使用 [favicon-generator](https://redketchup.io/favicon-generator)生成favicon（网页icon文件），并下载所有文件到`REPO/images`。
 1. 修改主页配置文件[_config.yml](../_config.yml):
     1. `title`: 主页标题
@@ -59,7 +60,7 @@ AcadHomepage
         ```html
         <span class='show_paper_citations' data-title='Fast revocable attribute-based encryption with data integrity for Internet of Things'></span>
         ```
-    1. 引用数来自 GitHub Action 生成的 `gs_data.json`。Action 成功跑过一次之前数据文件是 404，此时引用数位置一律留空且不报错；之后每天自动更新，无需改动主页。
+    1. 引用数在页面加载时从第一个可用的数据源读取（CDN 分支 → raw 分支 → `assets/data/` 快照），Action 成功后每天自动更新分支数据；三个源都不可用时才留空，且静默不报错。
 1. 你的主页将会被部署到`https://USERNAME.github.io`.
 
 ## 本地调试

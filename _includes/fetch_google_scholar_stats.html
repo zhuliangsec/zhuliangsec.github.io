@@ -1,67 +1,93 @@
 <script>
     $(document).ready(function () {
-        {% if site.google_scholar_stats_use_cdn %}
-        var gsDataBaseUrl = 'https://cdn.jsdelivr.net/gh/{{ site.repository }}@';
-        {% else %}
-        var gsDataBaseUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/';
-        {% endif %}
+        var summary = document.getElementById('citation-summary');
+        if (!summary) return;
 
-        // 数据文件由 GitHub Action 写入 google-scholar-stats 分支。
-        // 未生成时是 404，静默跳过：不显示空的引用数，也不留下加载失败的徽标。
-        $.getJSON(gsDataBaseUrl + 'google-scholar-stats/gs_data.json')
-            .done(function (data) {
-                var summary = document.getElementById('citation-summary');
-                var total = document.getElementById('total_cit');
-                if (summary && total && typeof data.citedby !== 'undefined') {
-                    total.textContent = data.citedby;
-                    var badge = document.getElementById('citation-badge');
-                    if (badge) {
-                        badge.src = 'https://img.shields.io/endpoint?url=' +
-                            encodeURIComponent(summary.getAttribute('data-shields-url'));
-                    }
-                    summary.style.display = '';
-                }
-
-                // 单篇论文引用数：在论文条目末尾放一个 span，以下两种写法二选一。
-                //   按 ID（精确）：<span class='show_paper_citations' data='作者ID:论文ID'></span>
-                //   按标题（省事）：<span class='show_paper_citations' data-title='论文标题'></span>
-                // 标题匹配忽略大小写、空格与标点，对照 gs_data.json 里的 bib.title。
-                var publications = data.publications || {};
-                function norm(s) {
-                    return (s || '').toString().toLowerCase().replace(/[^a-z0-9]+/g, '');
-                }
-                var byTitle = {};
-                Object.keys(publications).forEach(function (key) {
-                    var pub = publications[key];
-                    var title = norm(pub.bib && pub.bib.title);
-                    if (title && !byTitle[title]) byTitle[title] = pub;
+        // 数据源按优先级依次尝试：
+        //   1. Action 生成的 google-scholar-stats 分支（CDN，国内可访问）
+        //   2. 同一分支的 raw.githubusercontent.com（CDN 缓存/故障时）
+        //   3. 仓库内快照 assets/data/（Action 尚未成功过时兜底）
+        // 任一可用即渲染；全部不可用则静默，页面不出现空引用数或坏图。
+        var primaryShields = summary.getAttribute('data-shields-url');
+        var sources = [];
+        if (primaryShields) {
+            sources.push({
+                data: primaryShields.replace(/gs_data_shieldsio\.json$/, 'gs_data.json'),
+                shields: primaryShields
+            });
+            if (primaryShields.indexOf('cdn.jsdelivr.net') !== -1) {
+                var rawBase = 'https://raw.githubusercontent.com/{{ site.repository }}/google-scholar-stats/';
+                sources.push({
+                    data: rawBase + 'gs_data.json',
+                    shields: rawBase + 'gs_data_shieldsio.json'
                 });
+            }
+        }
+        var localBase = location.origin + '/assets/data/';
+        sources.push({
+            data: localBase + 'gs_data.json',
+            shields: localBase + 'gs_data_shieldsio.json'
+        });
 
-                // 先精确匹配；Scholar 有时会在标题后附加 ": FirstAuthor et al."，
-                // 再做一次双向包含匹配，容忍这类后缀与连字符差异。
-                function findByTitle(wanted) {
-                    if (!wanted) return null;
-                    if (byTitle[wanted]) return byTitle[wanted];
-                    var keys = Object.keys(byTitle);
-                    for (var i = 0; i < keys.length; i++) {
-                        if (keys[i].indexOf(wanted) !== -1 || wanted.indexOf(keys[i]) !== -1) {
-                            return byTitle[keys[i]];
-                        }
-                    }
-                    return null;
+        function render(data, source) {
+            var total = document.getElementById('total_cit');
+            if (total && typeof data.citedby !== 'undefined') {
+                total.textContent = data.citedby;
+                var badge = document.getElementById('citation-badge');
+                if (badge) {
+                    badge.src = 'https://img.shields.io/endpoint?url=' +
+                        encodeURIComponent(source.shields);
                 }
+                summary.style.display = '';
+            }
 
-                Array.prototype.forEach.call(
-                    document.getElementsByClassName('show_paper_citations'),
-                    function (element) {
-                        var pub = publications[element.getAttribute('data')] ||
-                                  findByTitle(norm(element.getAttribute('data-title')));
-                        if (pub && typeof pub.num_citations !== 'undefined') {
-                            element.innerHTML = '| Citations: ' + pub.num_citations;
-                        }
+            // 单篇论文引用数：在论文条目末尾放一个 span，以下两种写法二选一。
+            //   按 ID（精确）：<span class='show_paper_citations' data='作者ID:论文ID'></span>
+            //   按标题（省事）：<span class='show_paper_citations' data-title='论文标题'></span>
+            // 标题匹配忽略大小写、空格与标点，对照 gs_data.json 里的 bib.title。
+            var publications = data.publications || {};
+            function norm(s) {
+                return (s || '').toString().toLowerCase().replace(/[^a-z0-9]+/g, '');
+            }
+            var byTitle = {};
+            Object.keys(publications).forEach(function (key) {
+                var pub = publications[key];
+                var title = norm(pub.bib && pub.bib.title);
+                if (title && !byTitle[title]) byTitle[title] = pub;
+            });
+
+            // 先精确匹配；Scholar 有时会在标题后附加 ": FirstAuthor et al."，
+            // 再做一次双向包含匹配，容忍这类后缀与连字符差异。
+            function findByTitle(wanted) {
+                if (!wanted) return null;
+                if (byTitle[wanted]) return byTitle[wanted];
+                var keys = Object.keys(byTitle);
+                for (var i = 0; i < keys.length; i++) {
+                    if (keys[i].indexOf(wanted) !== -1 || wanted.indexOf(keys[i]) !== -1) {
+                        return byTitle[keys[i]];
                     }
-                );
-            })
-            .fail(function () { /* 数据尚未生成或 CDN 暂不可用，保持隐藏即可 */ });
+                }
+                return null;
+            }
+
+            Array.prototype.forEach.call(
+                document.getElementsByClassName('show_paper_citations'),
+                function (element) {
+                    var pub = publications[element.getAttribute('data')] ||
+                              findByTitle(norm(element.getAttribute('data-title')));
+                    if (pub && typeof pub.num_citations !== 'undefined') {
+                        element.innerHTML = '| Citations: ' + pub.num_citations;
+                    }
+                }
+            );
+        }
+
+        function trySource(i) {
+            if (i >= sources.length) return; // 全部不可用：保持隐藏，不报错
+            $.getJSON(sources[i].data)
+                .done(function (data) { render(data, sources[i]); })
+                .fail(function () { trySource(i + 1); });
+        }
+        trySource(0);
     });
 </script>

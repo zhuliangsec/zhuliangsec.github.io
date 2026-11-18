@@ -1,9 +1,10 @@
 name: Get Citation Data
 
+# 已移除 page_build 触发：Pages 每次构建都会再触发一次本 Action，
+# 造成多个 Job 并发、争抢同一个数据分支。
 on:
   push:
     branches: [main]
-  page_build:
   schedule:
     - cron: '0 8 * * *'
   workflow_dispatch:
@@ -11,13 +12,18 @@ on:
 permissions:
   contents: write
 
+# 同一时刻只保留一个抓取任务，避免旧的卡住任务占用分支
+concurrency:
+  group: google-scholar-stats
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
     - uses: actions/checkout@v4
 
-    # 用 actions 管理的 Python，避免 ubuntu-latest 系统 Python 的 PEP 668 限制
     - uses: actions/setup-python@v5
       with:
         python-version: '3.11'
@@ -40,11 +46,11 @@ jobs:
           echo "使用 Google Scholar ID: $ID"
         fi
 
+    # main.py 只用 Python 标准库（单次 HTTP 请求解析列表页），无需 pip install
     - name: Run
       if: steps.scholar.outputs.id != ''
       run: |
         cd ./google_scholar_crawler
-        python -m pip install -r requirements.txt
         python main.py
         cd ./results
         git init
