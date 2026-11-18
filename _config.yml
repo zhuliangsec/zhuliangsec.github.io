@@ -1,99 +1,73 @@
 # Welcome to Jekyll!
 #
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
+# 这里放影响全站的设置，修改后需要重启 `jekyll serve`（不会自动重载）。
 
 # Site Settings
 title                    : "Liang Zhu (朱亮)"
-description              : 
+description              : "Personal homepage of Liang Zhu (朱亮), Ph.D. student in the Software Engineering Institute at East China Normal University."
+url                      : "https://zhuliangsec.github.io"
 repository               : "zhuliangsec/zhuliangsec.github.io"
+
+# Google Scholar 引用数自动更新：
+# 下面的 ID 来自 Scholar 主页 URL 中 user= 后面那串，workflow 会直接读取它，
+# 也可以在 Settings -> Secrets and variables -> Actions 里用 GOOGLE_SCHOLAR_ID 覆盖。
+# 统计结果写入 google-scholar-stats 分支后，页面自动显示总引用数与徽标。
+# true 走 jsDelivr CDN（国内可访问，但有缓存延迟），false 走 raw.githubusercontent.com。
+google_scholar_id            : "hbWYZ4MAAAAJ"
 google_scholar_stats_use_cdn : true
 
-# google analytics
-google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
+# Google Analytics：填入 ID（如 G-XXXXXXXXXX）后自动启用，留空则不加载任何统计脚本。
+google_analytics_id      :
 
-# SEO Related
-google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about
-bing_site_verification   :  # get bing_site_verification from https://www.bing.com/webmasters/about
-baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.baidu.com/login/index?u=/site/index
+# SEO 验证：从各搜索引擎的站长平台获取后填入。
+google_site_verification :
+bing_site_verification   :
+baidu_site_verification  :
 
-# Site Author
+# Site Author（侧栏资料）
+# 只列出常用项；对应逻辑在 _includes/author-profile.html，未填写的项不会渲染。
 author:
   name             : "Liang Zhu (朱亮)"
   avatar           : "images/zl.jpg"
   bio              : "Ph.D. student at East China Normal University"
   location         : "China"
   employer         :
-  pubmed           : 
-  googlescholar    : 
-  email            : 
-  researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
-  uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           : # e.g., "github username"
-  google_plus      :
-  keybase          :
-  instagram        :
-  impactstory      : # e.g., "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  lastfm           :
-  linkedin         : # e.g., "linkedin username"
+  email            :          # 填邮箱后显示 Email 图标
+  uri              :          # 个人网址
+  github           :          # 只需用户名
+  googlescholar    : "https://scholar.google.com.hk/citations?user=hbWYZ4MAAAAJ&hl=zh-CN"
+  researchgate    :
+  twitter          :
+  linkedin         :
   dblp             : "https://dblp.org/pid/85/20.html"
   orcid            : "https://orcid.org/0000-0001-8617-4121"
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            :
-  tumblr           :
-  twitter          : 
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :
-  wikipedia        :
 
 
 # Reading Files
 include:
-  - .htaccess
   - _pages
-  - files
 exclude:
   - docs
   - google_scholar_crawler
+  - .github
+  - .gitignore
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - run_server.sh
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
   - .bundle
   - .jekyll-assets-cache
   - .sass-cache
-  - .github
-  - CHANGELOG
-  - Capfile
-  - Gemfile
-  - Gruntfile.js
-  - LICENSE
-  - README
-  - Rakefile
   - assets/js/_main.js
   - assets/js/plugins
   - assets/js/vendor
-  - config
-  - gulpfile.js
-  - log
   - node_modules
-  - package.json
   - tmp
   - vendor
-keep_files:
-  - .git
-  - .svn
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
@@ -131,33 +105,15 @@ defaults:
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed
 
 
 # Outputting
 permalink: /:categories/:title/
-timezone: Asia/Shanghai # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Shanghai
 
 
-# Plugins
+# Plugins（本仓库是单页站点，不需要分页 / RSS / gist）
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-redirect-from
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-
-
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+  - jekyll-sitemap          # 生成 sitemap.xml
+  - jekyll-redirect-from    # _pages/about.md 中的 redirect_from

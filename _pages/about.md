@@ -22,6 +22,8 @@ Liang Zhu (朱亮) is now a fourth-year Ph.D. student in the Software Engineerin
 💬 lzhu @ stu.ecnu.edu.cn
 
 
+<span class='anchor' id='news'></span>
+
 # 🔥 News
 - *2026.11*: &nbsp;🎉🎉 Awarded the Outstanding Student Honor at East China Normal University.
 - *2026.11*: &nbsp;🎉🎉 Awarded the East China Normal University Scholarship.
@@ -31,8 +33,15 @@ Liang Zhu (朱亮) is now a fourth-year Ph.D. student in the Software Engineerin
 
 
 
+<span class='anchor' id='publications'></span>
+
 # 📝 Selected Publications 
 
+<!-- 引用数由 fetch_google_scholar_stats.html 填充；爬虫数据不存在时整行自动隐藏 -->
+<p id="citation-summary" data-shields-url="{{ url }}" style="display:none">
+  <a href="{{ site.author.googlescholar }}">Google Scholar citations</a>: <strong id="total_cit"></strong>
+  <img id="citation-badge" alt="Google Scholar citations" style="vertical-align:middle;margin-left:.5em">
+</p>
 
 1. **L. Zhu**, X. Zhang and X. Li, "[Privacy-Preserving, Verifiable, and Transformable Access Control for Cloud-Assisted IoV](https://ieeexplore.ieee.org/document/11321133)," in IEEE Internet of Things Journal, doi: 10.1109/JIOT.2025.3650174. (SCI一区, top)
 
@@ -42,18 +51,25 @@ Liang Zhu (朱亮) is now a fourth-year Ph.D. student in the Software Engineerin
 
 1. 张启坤, **朱亮**, 韩桂锋等. [边云协同场景中基于动态属性权限的群组密钥协商协议](https://doi.org/10.12263/DZXB.20220727)[J]. 电子学报.2024，52(6):1911-1924. (中文CCF-A)
 
+<span class='anchor' id='educations'></span>
+
 # 📖 Educations
 - *2023.09 - 2027.06 (now)*, Ph.D. student/candidate, Software Engineering Institute, East China Normal University. 
 - *2020.09 - 2023.06*, Master, School of Computer and Communication Engineering, Zhengzhou University of Light Industry. 
 - *2016.09 - 2020.06*, Undergraduate, School of Computer and Communication Engineering, Zhengzhou University of Light Industry. 
 
 
+<span class='anchor' id='honors'></span>
+
 # 🎖 Honors and Awards
+* 优秀学生，华东师范大学，2026.
 * 分众奖学金，华东师范大学, 2026.
 * 国家奖学金, 教育部, 2023.
 * 科研先进个人, 郑州轻工业大学, 2023.
 * 优秀研究生, 郑州轻工业大学, 2021.
 * 河南省优秀毕业生, 河南省教育厅, 2020.
+
+<span class='anchor' id='services'></span>
 
 # 📚 Academic Services
 
@@ -64,4 +80,3 @@ Liang Zhu (朱亮) is now a fourth-year Ph.D. student in the Software Engineerin
 * 4th International Conference on Machine Learning for Cyber Security
 
 <a href="https://info.flagcounter.com/aXGI"><img src="https://s05.flagcounter.com/count2/aXGI/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_6/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
-

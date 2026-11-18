@@ -1,4 +1,15 @@
 <script src="assets/js/main.min.js"></script>
 
+<script>
+  // 只让站外链接在新窗口打开；站内锚点保持在当前页滚动。
+  // 原先在 head 里用 <base> 强制所有链接新窗口打开，会误伤站内锚点。
+  document.querySelectorAll('a[href^="http"]').forEach(function (a) {
+    if (a.hostname !== window.location.hostname) {
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+</script>
+
 {% include analytics.html %}
 {% include fetch_google_scholar_stats.html %}

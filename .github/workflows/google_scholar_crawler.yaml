@@ -1,29 +1,56 @@
 name: Get Citation Data
 
-on: 
- page_build: 
- schedule:
-  - cron:  '0 8 * * *'
+on:
+  push:
+    branches: [main]
+  page_build:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Install Reqs
+    - uses: actions/checkout@v4
+
+    # 用 actions 管理的 Python，避免 ubuntu-latest 系统 Python 的 PEP 668 限制
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    # ID 默认读 _config.yml 里的 google_scholar_id；如需覆盖可在仓库 Secrets 里设 GOOGLE_SCHOLAR_ID
+    - name: Resolve Google Scholar ID
+      id: scholar
+      env:
+        SECRET_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
       run: |
-        sudo apt-get install python3-setuptools
+        ID="${SECRET_SCHOLAR_ID:-}"
+        if [ -z "$ID" ]; then
+          ID=$(sed -nE 's/^google_scholar_id[[:space:]]*:[[:space:]]*"?([^"[:space:]#]+)"?.*/\1/p' _config.yml | head -1)
+        fi
+        echo "GOOGLE_SCHOLAR_ID=$ID" >> "$GITHUB_ENV"
+        echo "id=$ID" >> "$GITHUB_OUTPUT"
+        if [ -z "$ID" ]; then
+          echo "::warning::未找到 Google Scholar ID，跳过引用统计。"
+        else
+          echo "使用 Google Scholar ID: $ID"
+        fi
+
     - name: Run
+      if: steps.scholar.outputs.id != ''
       run: |
         cd ./google_scholar_crawler
-        pip3 install -r requirements.txt
-        python3 main.py
+        python -m pip install -r requirements.txt
+        python main.py
         cd ./results
         git init
         git config --local user.name "${GITHUB_ACTOR}"
+        git config --local user.email "actions@github.com"
         export remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
         git add *.json
-        git commit -m "Updated Citation Data"
+        git diff --cached --quiet || git commit -m "Updated Citation Data"
         git push "${remote_repo}" HEAD:google-scholar-stats --force
-      env: 
-        GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}

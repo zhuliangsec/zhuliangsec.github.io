@@ -1,2 +1,2 @@
-jsonpickle==1.4.2
+bibtexparser==1.4.1
 scholarly==1.5.1
