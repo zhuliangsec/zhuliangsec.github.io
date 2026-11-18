@@ -39,7 +39,6 @@ Liang Zhu (朱亮) is now a fourth-year Ph.D. student in the Software Engineerin
 
 <!-- 引用数由 fetch_google_scholar_stats.html 填充；爬虫数据不存在时整行自动隐藏 -->
 <p id="citation-summary" data-shields-url="{{ url }}" style="display:none">
-  <a href="{{ site.author.googlescholar }}">Google Scholar citations</a>: <strong id="total_cit"></strong>
   <img id="citation-badge" alt="Google Scholar citations" style="vertical-align:middle;margin-left:.5em">
 </p>
 
