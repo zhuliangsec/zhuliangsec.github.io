@@ -48,12 +48,17 @@ Some examples:
     1. More configuration details are described in the comments.
 1. Add your homepage content in `_pages/about.md`.
     1. You can use html+markdown syntax just same as jekyll.
-    1. You can use a `<span>` tag with class `show_paper_citations` and attribute `data` to display the citations of your paper. Set the data to the google scholar paper ID. For
+    1. You can use a `<span>` tag with class `show_paper_citations` and attribute `data` to display the citations of your paper. Set the data to the google scholar paper ID. For example:
         ```html
         <span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span>
         ``` 
         > Q: How to get the google scholar paper ID?   
-        > A: Enter your google scholar homepage and click the paper name. Then you can see the paper ID from `citation_for_view=XXXX`, where `XXXX` is the required paper ID.
+        > A: Enter your google scholar homepage and click the paper name. Then you can see the paper ID from `citation_for_view=XXXX`, where `XXXX` is the required paper ID (keep the author ID prefix, e.g. `hbWYZ4MAAAAJ:zYLM7Y9cAGgC`). The same IDs are the keys of `publications` in `gs_data.json`.
+    1. Alternatively, skip the ID and match by paper title (case, spaces and punctuation are ignored):
+        ```html
+        <span class='show_paper_citations' data-title='Fast revocable attribute-based encryption with data integrity for Internet of Things'></span>
+        ```
+    1. Citation counts are loaded at page load from the `google-scholar-stats` branch, which is produced by the GitHub Action. Nothing is displayed (and nothing breaks) until the Action has succeeded at least once; afterwards the numbers refresh automatically every day.
 1. Your page will be published at `https://USERNAME.github.io`.
 
 ## Debug Locally

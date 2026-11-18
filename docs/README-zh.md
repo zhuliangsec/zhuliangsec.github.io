@@ -38,7 +38,7 @@ AcadHomepage
 1. 配置谷歌学术引用爬虫：
     1. 在你的谷歌学术引用页面的url里找到你的谷歌学术ID：例如，在url https://scholar.google.com/citations?user=SCHOLAR_ID 中，`SCHOLAR_ID`部分即为你的谷歌学术ID。
     1. 在[_config.yml](../_config.yml)中把`google_scholar_id`填为该ID，并把`author.googlescholar`填为你的谷歌学术主页完整URL。workflow会直接读取配置文件；也可以在`Settings -> Secrets -> Actions`里用`GOOGLE_SCHOLAR_ID`覆盖。
-    1. 在github本仓库页面的`Action`中，点击*"I understand my workflows, go ahead and enable them"*启用workflows by clicking *"。本action将会谷歌学术引用的统计量数据`gs_data.json`到本仓库的`google-scholar-stats`分支中。每次修改main分支的内容会触发该action。本action也会在每天08:00 UTC定时触发。
+    1. 在 GitHub 仓库的 `Actions` 页面启用 workflows。该 action 会把谷歌学术引用统计数据 `gs_data.json` 写入本仓库的 `google-scholar-stats` 分支；每次推送 main 分支都会触发，此外每天 08:00 UTC 定时运行一次，也可在 Actions 里手动 Run workflow。
 1. 使用 [favicon-generator](https://redketchup.io/favicon-generator)生成favicon（网页icon文件），并下载所有文件到`REPO/images`。
 1. 修改主页配置文件[_config.yml](../_config.yml):
     1. `title`: 主页标题
@@ -50,6 +50,16 @@ AcadHomepage
     1. `google_scholar_stats_use_cdn`: 使用CDN读取存储于`https://raw.githubusercontent.com/`的google scholar引用统计数据，防止中国大陆地区被墙无法访问的情况。但是CDN有缓存，因此`google_scholar_stats_use_cdn : true`时，引用数据更新会有延迟。
     1. 更多的配置信息在注释中有详细描述。
 1. 将你的主页内容添加到 [_pages/about.md](../_pages/about.md).
+    1. **显示单篇论文的引用数**：在论文条目末尾加一个 `<span>`，页面加载时会自动填入引用数：
+        ```html
+        1. 作者, "[论文标题](链接)," 期刊, 年份. <span class='show_paper_citations' data='hbWYZ4MAAAAJ:zYLM7Y9cAGgC'></span>
+        ```
+        `data` 填 Google Scholar 的论文 ID，格式是「作者ID:论文ID」。获取方法：在 Scholar 主页点开论文标题，地址栏 `citation_for_view=` 后面那一串就是；也可以直接查 `google-scholar-stats` 分支 `gs_data.json` 里 `publications` 的键名。
+    1. 不想查 ID 也可以直接写论文标题，脚本会拿它去匹配 `gs_data.json` 里的 `bib.title`（忽略大小写、空格和标点）：
+        ```html
+        <span class='show_paper_citations' data-title='Fast revocable attribute-based encryption with data integrity for Internet of Things'></span>
+        ```
+    1. 引用数来自 GitHub Action 生成的 `gs_data.json`。Action 成功跑过一次之前数据文件是 404，此时引用数位置一律留空且不报错；之后每天自动更新，无需改动主页。
 1. 你的主页将会被部署到`https://USERNAME.github.io`.
 
 ## 本地调试

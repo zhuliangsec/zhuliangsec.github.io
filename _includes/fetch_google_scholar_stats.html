@@ -6,31 +6,62 @@
         var gsDataBaseUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/';
         {% endif %}
 
-        // 未配置 GOOGLE_SCHOLAR_ID 时数据文件不存在（404），此时静默跳过，
-        // 页面不会显示空的引用数，也不会出现加载失败的徽标。
-        $.getJSON(gsDataBaseUrl + 'google-scholar-stats/gs_data.json').done(function (data) {
-            var summary = document.getElementById('citation-summary');
-            var total = document.getElementById('total_cit');
-            if (summary && total && typeof data.citedby !== 'undefined') {
-                total.textContent = data.citedby;
-                var badge = document.getElementById('citation-badge');
-                if (badge) {
-                    badge.src = 'https://img.shields.io/endpoint?url=' +
-                        encodeURIComponent(summary.getAttribute('data-shields-url'));
+        // 数据文件由 GitHub Action 写入 google-scholar-stats 分支。
+        // 未生成时是 404，静默跳过：不显示空的引用数，也不留下加载失败的徽标。
+        $.getJSON(gsDataBaseUrl + 'google-scholar-stats/gs_data.json')
+            .done(function (data) {
+                var summary = document.getElementById('citation-summary');
+                var total = document.getElementById('total_cit');
+                if (summary && total && typeof data.citedby !== 'undefined') {
+                    total.textContent = data.citedby;
+                    var badge = document.getElementById('citation-badge');
+                    if (badge) {
+                        badge.src = 'https://img.shields.io/endpoint?url=' +
+                            encodeURIComponent(summary.getAttribute('data-shields-url'));
+                    }
+                    summary.style.display = '';
                 }
-                summary.style.display = '';
-            }
 
-            // 单篇论文引用数：在论文后添加
-            // <span class='show_paper_citations' data='GOOGLE_SCHOLAR_PAPER_ID'></span>
-            var citationEles = document.getElementsByClassName('show_paper_citations');
-            Array.prototype.forEach.call(citationEles, function (element) {
-                var paperId = element.getAttribute('data');
-                var pub = data.publications && data.publications[paperId];
-                if (pub) {
-                    element.innerHTML = '| Citations: ' + pub.num_citations;
+                // 单篇论文引用数：在论文条目末尾放一个 span，以下两种写法二选一。
+                //   按 ID（精确）：<span class='show_paper_citations' data='作者ID:论文ID'></span>
+                //   按标题（省事）：<span class='show_paper_citations' data-title='论文标题'></span>
+                // 标题匹配忽略大小写、空格与标点，对照 gs_data.json 里的 bib.title。
+                var publications = data.publications || {};
+                function norm(s) {
+                    return (s || '').toString().toLowerCase().replace(/[^a-z0-9]+/g, '');
                 }
-            });
-        });
+                var byTitle = {};
+                Object.keys(publications).forEach(function (key) {
+                    var pub = publications[key];
+                    var title = norm(pub.bib && pub.bib.title);
+                    if (title && !byTitle[title]) byTitle[title] = pub;
+                });
+
+                // 先精确匹配；Scholar 有时会在标题后附加 ": FirstAuthor et al."，
+                // 再做一次双向包含匹配，容忍这类后缀与连字符差异。
+                function findByTitle(wanted) {
+                    if (!wanted) return null;
+                    if (byTitle[wanted]) return byTitle[wanted];
+                    var keys = Object.keys(byTitle);
+                    for (var i = 0; i < keys.length; i++) {
+                        if (keys[i].indexOf(wanted) !== -1 || wanted.indexOf(keys[i]) !== -1) {
+                            return byTitle[keys[i]];
+                        }
+                    }
+                    return null;
+                }
+
+                Array.prototype.forEach.call(
+                    document.getElementsByClassName('show_paper_citations'),
+                    function (element) {
+                        var pub = publications[element.getAttribute('data')] ||
+                                  findByTitle(norm(element.getAttribute('data-title')));
+                        if (pub && typeof pub.num_citations !== 'undefined') {
+                            element.innerHTML = '| Citations: ' + pub.num_citations;
+                        }
+                    }
+                );
+            })
+            .fail(function () { /* 数据尚未生成或 CDN 暂不可用，保持隐藏即可 */ });
     });
 </script>
